@@ -1,0 +1,351 @@
+/* Reset & basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+*,
+:before,
+:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #fafafa;
+  color: #060638;
+  line-height: 1.6;
+}
+
+/* h1,
+h3 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+} */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem 1.5rem;
+  background-color: #060638;
+  color: #fafafa;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav ul li a {
+  color: #fafafa;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffd163; /* softer gold accent */
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(180deg, #060638, #1a1a72);
+  color: white;
+  text-align: center;
+  padding: 0 1rem;
+  gap: 15px;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../ASSETS/IMAGES/herobg.png");
+  width: 100%;
+  height: 100%;
+  opacity: 0.15; /* subtle */
+  pointer-events: none; /* let clicks pass through */
+  background-size: cover; /* scale image to fill hero */
+  background-position: center; /* pick the part you want visible */
+  z-index: 0;
+}
+
+.hero-img {
+  z-index: 1;
+  width: 400px;
+  height: 400px;
+  transition: width height 0.3s ease;
+}
+
+.hero-img:hover {
+  z-index: 1;
+  width: 405px;
+  height: 405px;
+  cursor: pointer;
+}
+
+.hero-text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 4;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  text-shadow: 5px 5px 13px #060638;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-bottom: 1rem;
+  color: #e0e0ff;
+}
+
+.hero .cta-container {
+  z-index: 1;
+  display: flex;
+  gap: 15px;
+}
+
+.hero .cta {
+  padding: 0.4rem 2rem;
+  background-color: #ffd163; /* softer gold */
+  color: #060638;
+  font-weight: bold;
+  border-radius: 100px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.hero .cta:hover {
+  transform: scale(1.05);
+}
+
+/* Blog Section */
+.blogs {
+  border-top: 5px dashed #060638;
+  border-bottom: 5px dashed #060638;
+  padding: 5rem 3rem;
+  background-color: #e9edf8;
+}
+
+.blog-section-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 4rem;
+  gap: 15px;
+}
+
+.blog-section-desc h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  background-color: #060638;
+  padding: 0.2rem 1.3rem;
+  border-radius: 100px;
+}
+
+.blog-section-desc p {
+  max-width: 500px;
+}
+
+.blogs p {
+  font-size: 1rem;
+}
+
+.blog-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.blog-card {
+  background-color: #060638;
+  color: #fafafa;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.blog-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-card-text {
+  padding: 1rem; /* only applies to text area */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blog-card-text .read-more {
+  color: #ffd966;
+  font-weight: bold;
+}
+
+.blog-card h3 {
+  margin-bottom: 1rem;
+  color: #ffd163; /* softer gold */
+}
+
+.blog-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #e0e0ff;
+}
+
+.blog-card a {
+  font-weight: bold;
+  color: #ffd966; /* softer gold */
+}
+
+/* Contact Section */
+.contact {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  text-align: center;
+  gap: 2.5rem;
+}
+
+.contact::after {
+  content: "";
+  position: absolute;
+  background: url("../ASSETS/IMAGES/contactbg3.jpg");
+  width: 100%;
+  height: 100%;
+  opacity: 0.03; /* subtle */
+  pointer-events: none; /* let clicks pass through */
+  background-size: cover; /* scale image to fill hero */
+  background-position: center; /* pick the part you want visible */
+  z-index: 0;
+}
+
+.contact h2 {
+  z-index: 1;
+  font-size: 2.5rem;
+  color: #060638;
+}
+
+.contact-p a {
+  transition: color 0.2s ease;
+}
+
+.contact-p a:hover {
+  color: #ffd163;
+}
+
+.contact-container {
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.profile-photo {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffd966;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.4rem;
+  align-items: center;
+  font-weight: normal;
+}
+
+.socials a {
+  color: #060638;
+  border-radius: 100px;
+  padding: 2px 15px;
+  transition: background-color 0.3s ease;
+}
+
+.socials a:hover {
+  background-color: #ffd163;
+  border-radius: 100px;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #060638;
+  color: #fafafa;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.8em;
+  height: 200px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+}
