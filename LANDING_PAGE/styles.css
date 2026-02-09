@@ -342,7 +342,7 @@ footer {
   }
 
   .hero p {
-    font-size: 1.2rem;
+    font-size: 0.1rem;
   }
 
   .contact-container {
@@ -352,4 +352,12 @@ footer {
 
 .about-me-text {
   max-width: 600px;
+}
+
+.hero p.hero-credit {
+  position: absolute;
+  bottom: 0px;
+  right: 20px;
+  font-size: 0.9rem;
+  opacity: 0.4;
 }
