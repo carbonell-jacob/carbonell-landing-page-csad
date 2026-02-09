@@ -132,11 +132,34 @@ footer p {
   margin-top: 0px;
 }
 
+.img-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container a {
+  width: 600px;
+  height: 100%;
+}
+
 .image {
-  display: block;
-  margin: auto;
-  width: 40%;
-  height: 40%;
+  width: 100%;
   box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
+}
+
+.credits {
+  color: gray;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.go-top {
+  display: block;
+  width: fit-content;
+  margin: auto; /* auto left/right = centered */
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: center;
 }

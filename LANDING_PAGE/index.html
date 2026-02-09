@@ -18,7 +18,7 @@
       </div>
       <ul>
         <li><a href="#home">HOME</a></li>
-        <li><a href="../BIOGRAPHY/biography.html">ABOUT</a></li>
+        <li><a href="../BIOGRAPHY/biography.html" target="about">ABOUT</a></li>
         <li><a href="#blogs">BLOGS</a></li>
         <li><a href="#contact">CONTACT</a></li>
       </ul>
@@ -26,11 +26,14 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-      <img
-        class="hero-img"
-        src="../ASSETS/IMAGES/me.png"
-        alt="A photo of Jacob Carbonell"
-      />
+      <a href="../ASSETS/IMAGES/me.png">
+        <img
+          class="hero-img"
+          src="../ASSETS/IMAGES/me.png"
+          alt="A photo of Jacob Carbonell"
+        />
+      </a>
+
       <div class="hero-text-content">
         <h1>
           <i class="fa-solid fa-yin-yang"></i>
@@ -42,9 +45,10 @@
           <span style="color: #ffd163">Jacob!</span>
         </h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-          nihil exercitationem, nesciunt perspiciatis quia sunt sapiente
-          eligendi incidunt earum maiores illum.
+          Hey there! Welcome to my website! My name is Jacob Carbonell and I
+          love talking about random things about life, technology, and my career
+          as an aspiring software developer. Read my blogs or follow me through
+          my socials to learn more!
         </p>
         <div class="cta-container">
           <a class="cta" href="#blogs">Read my blogs</a>
@@ -56,10 +60,13 @@
     <!-- Blog Section -->
     <section class="blogs" id="blogs">
       <div class="blog-section-desc">
-        <h2><i class="fa-regular fa-newspaper"></i> BLOG POSTS</h2>
+        <h2>
+          <i class="fa-regular fa-newspaper" style="color: #ffd163"></i> BLOG
+          POSTS
+        </h2>
         <p>
           Take a look at my random thoughts, experiences, and insights about
-          life, tech, and stuff about career!
+          life, tech, and stuff about career.
         </p>
       </div>
 
@@ -69,6 +76,7 @@
             <img
               src="../ASSETS/IMAGES/expresslogo.png"
               alt="photo of expressjs"
+              title="Image credits: Xpertpk"
             />
             <div class="blog-card-text">
               <h3>Why I Love Using Express For My Backend</h3>
@@ -79,7 +87,11 @@
         </a>
         <a href="../BLOGS/blog2.html" target="blogWindow">
           <div class="blog-card">
-            <img src="../ASSETS/IMAGES/musicbg.jpg" alt="photo of expressjs" />
+            <img
+              src="../ASSETS/IMAGES/musicbg.jpg"
+              alt="photo of expressjs"
+              title="Image credits: Namroud Gorguis | Unsplash"
+            />
             <div class="blog-card-text">
               <h3>Why Music Is Like A Warm Hug To Me</h3>
               <p>
@@ -91,7 +103,11 @@
         </a>
         <a href="../BLOGS/blog3.html" target="blogWindow">
           <div class="blog-card">
-            <img src="../ASSETS/IMAGES/softeng.jpg" alt="photo of expressjs" />
+            <img
+              src="../ASSETS/IMAGES/softeng.jpg"
+              alt="photo of expressjs"
+              title="Image credits: ThisisEngineering | Unsplash"
+            />
             <div class="blog-card-text">
               <h3>Why Software Engineering Isn’t Just About Coding</h3>
               <p>
@@ -138,6 +154,13 @@
           >
         </div>
       </div>
+      <p class="about-me-text">
+        My name is <b>Jacob S. Carbonell</b>, and I am from the Philippines. I
+        am currently a sophomore at the University of the East, pursuing a
+        Bachelor of Science in Computer Science. My interests include gaming,
+        music, and sports. I am continuously honing my programming and
+        problem-solving skills as I work toward becoming a developer.
+      </p>
       <p class="contact-p">
         Want to know more about me? Read my
         <a href="../BIOGRAPHY/biography.html"><b>biography!</b></a>

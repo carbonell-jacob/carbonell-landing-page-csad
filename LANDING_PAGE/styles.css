@@ -349,3 +349,7 @@ footer {
     flex-direction: column;
   }
 }
+
+.about-me-text {
+  max-width: 600px;
+}
