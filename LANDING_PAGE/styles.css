@@ -68,12 +68,13 @@ nav ul li a:hover {
   z-index: 0;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   background: linear-gradient(180deg, #060638, #1a1a72);
   color: white;
   text-align: center;
-  padding: 0 1rem;
+  padding: 10rem 1rem;
   gap: 15px;
 }
 
@@ -251,10 +252,12 @@ nav ul li a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   background-color: #f5f5f5;
   text-align: center;
   gap: 2.5rem;
+  padding: 4rem 0;
+  border-top: 5px dashed #060638;
 }
 
 .contact::after {
@@ -342,7 +345,7 @@ footer {
   }
 
   .hero p {
-    font-size: 0.1rem;
+    font-size: 1rem;
   }
 
   .contact-container {
@@ -360,4 +363,64 @@ footer {
   right: 20px;
   font-size: 0.9rem;
   opacity: 0.4;
+}
+
+.pages {
+  padding: 5rem 3rem;
+  background-color: #060638;
+  color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 45px;
+}
+
+.pages h2 {
+  font-size: 2rem;
+  color: #060638;
+  background-color: #ffd966;
+  padding: 0.2rem 1.3rem;
+  border-radius: 100px;
+}
+
+.page-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.page-card {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fafafa;
+  border: 1px solid #ffd96655;
+  backdrop-filter: blur(6px);
+  border-radius: 7px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  font-size: 1.1rem;
+
+  padding: 10px;
+  width: 250px;
+  height: 50px;
+}
+
+.page-card {
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.page-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  background: #ffd966;
+  color: #060638;
+  border-color: #ffd966;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
